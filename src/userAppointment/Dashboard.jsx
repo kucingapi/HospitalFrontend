@@ -27,7 +27,7 @@ function Dashboard(props){
 	const makeAppointment = () => (
 		<>
 		  {appointments? appointments.map(elment => (
-			  Appointment(elment.name,element.description,element.registrants)
+			  Appointment(elment.name,elment.description,elment.registrants)
 		  )):<></>}
 		</>
 	  ); 
