@@ -1,0 +1,14 @@
+.half-width{
+	width: 50% !important;
+}
+
+.column{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.text-field{
+	margin-bottom: 1rem;
+}
+

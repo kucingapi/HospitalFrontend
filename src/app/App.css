@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+}
+.App-header {
+  background-color: hsl(0, 0%, 95%);
+  
+  min-height: 100vh;
+  /* display: flex; */
+  width: 100vw;
+  text-align: center;
+  font-size: calc(10px + 2vmin);
+  color: hsl(0, 0%, 10%);
+}
+
+.App-link {
+  color: #61dafb;
+}
