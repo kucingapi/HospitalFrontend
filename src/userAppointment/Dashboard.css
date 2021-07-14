@@ -1,0 +1,16 @@
+.appointment{
+	display: flex;
+	flex-direction: column;
+	min-height: 100px;
+	max-width: 240px;
+	align-items: flex-start;
+	justify-content: flex-start;
+	background-color: gainsboro;
+	text-align: start;
+}
+
+.appointment-container{
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+}

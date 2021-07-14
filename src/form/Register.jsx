@@ -4,13 +4,14 @@ import { useState } from "react";
 import axios from 'axios'
 
 function Register(props){
-	const [username, setUsername] = useState("");
-	const [email, setEmail] = useState("");
-	const [firstname, setFirstname] = useState("");
-	const [lastname, setLastname] = useState("");
+	const [username, setUsername] = useState(null)
+	const [email, setEmail] = useState(null)
+	const [firstname, setFirstname] = useState(null)
+	const [lastname, setLastname] = useState(null)
 	const [age, setAge] = useState(0);	
-	const [password, setPassword] = useState("");
-	const APIURL = "https://hospital-api-nodejs.herokuapp.com/auth/register";
+	const [password, setPassword] = useState(null)
+	// const APIURL = "https://hospital-api-nodejs.herokuapp.com/auth/register";
+	const APIURL = "http://localhost:2999/auth/register";
 
 	const usernameHandler = (event) => {
 		setUsername(event.target.value);
@@ -37,6 +38,10 @@ function Register(props){
 	}
 
 	const loginHandler = async (event) => {
+		if(!(username && email && firstname && lastname && age && password)){
+			alert('Please Fill all the field');
+			return -1;
+		}
 		const user = {
 			"username": {username},
 			"email": {email},

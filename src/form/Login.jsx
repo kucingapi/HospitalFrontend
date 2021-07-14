@@ -3,12 +3,14 @@ import Form from './Form.jsx'
 import { useState } from "react";
 import axios from 'axios'
 import './Login.css';
+import Cookies from 'universal-cookie'
 
 function Login(props) {
+	const cookies = new Cookies();
 	const [username, setUsername] = useState("");
 	const [password, setPassword] = useState("");
-	// const APIURL = "https://hospital-api-nodejs.herokuapp.com/";
-	const APIURL = "http://localhost:2999/";
+	// const APIURL = "https://hospital-api-nodejs.herokuapp.com/auth/login";
+	const APIURL = "http://localhost:2999/auth/login";
 
 	const usernameHandler = (event) => {
 		setUsername(event.target.value);
@@ -23,10 +25,13 @@ function Login(props) {
 			"username": `${username}`,
 			"password": `${password}`
 		}
-		username = "";
-		password = "";
-		const result = await axios.post(APIURL+"auth/login/",user);
-		console.log(result);
+		setUsername("");
+		setPassword("");
+		const result = await axios.post(APIURL,user).catch((err) => {
+			alert('error to the api')
+		});
+		
+		cookies.set('auth-token',result.data.token,{path:'/'});
 	}
 	function MakeTextField(width,label,id,type,value,func){
 		return (
