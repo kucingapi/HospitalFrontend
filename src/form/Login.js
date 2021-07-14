@@ -19,14 +19,14 @@ function Login(props) {
 	}
 
 	const loginHandler = async (event) => {
-		const submitUsername =username;
-		const submitPassword =password;
 		const user = {
 			"username": `${username}`,
 			"password": `${password}`
 		}
+		username = "";
+		password = "";
 		const result = await axios.post(APIURL+"auth/login/",user);
-		
+		console.log(result);
 	}
 	function MakeTextField(width,label,id,type,value,func){
 		return (
