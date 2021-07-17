@@ -1,9 +1,15 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;800&display=swap');
+
 * {
   margin: 0;
+  font-family: 'Poppins';
+  font-size: 16px;
+  color: #EEEEEE; 
 }
+
 .App-header {
-  background-color: hsl(0, 0%, 95%);
-  
+  background: linear-gradient(116.17deg, #E4E1F7 0%, rgba(40, 10, 209, 0.54) 99.07%);  
   min-height: 100vh;
   /* display: flex; */
   width: 100vw;

@@ -53,6 +53,7 @@ function Register(props){
 		const result = await axios.post(APIURL,user);
 		console.log(result);
 	}
+
 	function MakeTextField(width,label,id,type,value,func){
 		return (
 			<FormControl className={`${width}-width`}>

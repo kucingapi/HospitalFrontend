@@ -1,16 +1,49 @@
+h1{
+	font-size: 3rem;
+}
+h2{
+	font-size: 1.5rem;
+}
+
 .appointment{
 	display: flex;
 	flex-direction: column;
-	min-height: 100px;
+	min-height: 240px;
 	max-width: 240px;
 	align-items: flex-start;
 	justify-content: flex-start;
-	background-color: gainsboro;
+	padding: 10px;
+
+	background: linear-gradient(180deg, rgba(20, 30, 97, 0.497) 0%, rgba(20, 30, 97, 0.21) 100%);
+	backdrop-filter: blur(10px);
+	
+	border-radius: 20px;
 	text-align: start;
+}
+
+article{
+	font-size: 1.2rem;
+	font-weight: 400;
 }
 
 .appointment-container{
 	display: grid;
 	gap: 1rem;
 	grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+	margin:10px;
+	place-items: center;
+}
+
+.doctor-name{
+	text-align: center;
+}
+
+.queue{
+	font-weight: 200;
+	margin-bottom: 5px;
+}
+
+.button-container{
+	margin-left: auto;
+	margin-right: auto;
 }

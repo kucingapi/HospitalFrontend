@@ -21,13 +21,16 @@ function Login(props) {
 	}
 
 	const loginHandler = async (event) => {
+		console.log('test');
+		console.log(cookies);
 		const user = {
 			"username": `${username}`,
 			"password": `${password}`
 		}
 		setUsername("");
 		setPassword("");
-		const result = await axios.post(APIURL,user).catch((err) => {
+		const result = await axios.post(APIURL,user)
+		.catch((err) => {
 			alert('error to the api')
 		});
 		
